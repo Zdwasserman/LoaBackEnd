@@ -1,4 +1,4 @@
-package com.loa2.model;
+package com.loa.model;
 
 import org.springframework.stereotype.Component;
 

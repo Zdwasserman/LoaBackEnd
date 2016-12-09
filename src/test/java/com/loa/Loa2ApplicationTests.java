@@ -1,4 +1,4 @@
-package com.loa2;
+package com.loa;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
