@@ -23,9 +23,8 @@ public class Avatar
     private int speed;
     private int intelligence;
     private int charisma;
-    private int wisdom;
+    //private int wisdom;
     private int dexterity;
-    //private int level;
 
     public Avatar(){}
 
@@ -89,13 +88,13 @@ public class Avatar
         this.charisma = charisma;
     }
 
-    public int getWisdom() {
-        return wisdom;
-    }
+//    public int getWisdom() {
+//        return wisdom;
+//    }
 
-    public void setWisdom(int wisdom) {
-        this.wisdom = wisdom;
-    }
+//    public void setWisdom(int wisdom) {
+//        this.wisdom = wisdom;
+//    }
 
     public int getDexterity() {
         return dexterity;

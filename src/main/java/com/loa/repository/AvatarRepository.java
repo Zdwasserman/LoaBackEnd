@@ -15,7 +15,7 @@ import java.util.List;
  */
 
 @Transactional
-@RepositoryRestResource(collectionResourceRel = "avatar", path ="loaavatars")
+@RepositoryRestResource(collectionResourceRel ="avatar", path ="loa")
 public interface AvatarRepository extends JpaRepository<Avatar, Integer>
 {
 
