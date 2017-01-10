@@ -41,6 +41,7 @@ public class AvatarController
         return experiencePoints;
     }
 
+    @RequestMapping("/updateStats", method = RequestMethod.POST)
     public void updateStats(Avatar avatar, String activity, int minutes)
     {
         int experiencePoints = calculateExperience(minutes);
@@ -48,18 +49,25 @@ public class AvatarController
         {
             case "run":     avatar.setStamina(avatar.getStamina()+ experiencePoints);
                             avatar.setStrength(avatar.getStrength()+ (experiencePoints/2));
+                            avatarrepo.save(avatar);
                             break;
             case "lift weights": avatar.setStrength(avatar.getStrength() + experiencePoints);
                                  avatar.setStamina(avatar.getStamina()+ (experiencePoints/2));
+                                 avatarrepo.save(avatar);
+                                 break;
             case "study":   avatar.setIntelligence(avatar.getIntelligence()+ experiencePoints);
+                            avatarrepo.save(avatar);
                             break;
             case "play instrument": avatar.setDexterity(avatar.getDexterity()+ experiencePoints);
                                     avatar.setCharisma((avatar.getCharisma() + experiencePoints));
+                                    avatarrepo.save(avatar);
                                     break;
             case "draw": avatar.setDexterity(avatar.getDexterity()+ experiencePoints);
+                         avatarrepo.save(avatar);
                          break;
             case "dance": avatar.setCharisma((avatar.getCharisma() + experiencePoints));
                           avatar.setStamina(avatar.getStamina()+ experiencePoints);
+                          avatarrepo.save(avatar);
                           break;
         }
 
