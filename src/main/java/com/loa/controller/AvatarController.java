@@ -41,7 +41,7 @@ public class AvatarController
         return experiencePoints;
     }
 
-    @RequestMapping("/updateStats", method = RequestMethod.POST)
+    @RequestMapping(value="/updateStats", method = RequestMethod.POST)
     public void updateStats(Avatar avatar, String activity, int minutes)
     {
         int experiencePoints = calculateExperience(minutes);
